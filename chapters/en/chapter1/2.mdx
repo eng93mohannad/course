@@ -1,19 +1,37 @@
-# Natural Language Processing[[natural-language-processing]]
+# Natural Language Processing معالجة اللغة الطبيعية
+[[natural-language-processing]]
 
 <CourseFloatingBanner
-    chapter={1}
+    الفصل={1}
     classNames="absolute z-10 right-0 top-0"
 />
 
-Before jumping into Transformer models, let's do a quick overview of what natural language processing is and why we care about it.
+قبل الانتقال إلى نماذج المحولات Transformer ,دعنا نلقي نظرة عامة سريعة على ماهية معالجة اللغة الطبيعية ولماذا نهتم بها..
+ [Natural-Language-Processing]
 
-## What is NLP?[[what-is-nlp]]
 
-NLP is a field of linguistics and machine learning focused on understanding everything related to human language. The aim of NLP tasks is not only to understand single words individually, but to be able to understand the context of those words.
 
-The following is a list of common NLP tasks, with some examples of each:
 
-- **Classifying whole sentences**: Getting the sentiment of a review, detecting if an email is spam, determining if a sentence is grammatically correct or whether two sentences are logically related or not
+![image](https://user-images.githubusercontent.com/45969744/230744044-a8b8d298-6f47-4136-9c11-d8c5c6b21fd5.png)
+
+## ماذا نقصد بمعاجلة اللغة الطبيعية  NLP?[[what-is-nlp]]
+معالجة اللغة الطبيعية NLP هي مجال يتمحور حول اللغويات وتعلم الآلة والذي يركز على فهم كل ما يتعلق باللغة البشرية. الهدف من مهام معالجة اللغة الطبيعية ليس فقط فهم الكلمات الفردية بشكل منفصل، وإنما القدرة على فهم سياق تلك الكلمات.
+
+في القائمة ادناه بعض من مهام معالجة اللغة الطبيعية NLP الشائعة ، مع بعض الأمثلة على كل منها:
+**Classifying whole sentencesتصنيف الجمل الكاملة:** الحصول على حس المراجعة كأن يتم كشف إذا كانت رسالة البريد الالكتروني رسالة مزعجة أو تحديد ما إذا كانت الجملة صحيحة قواعدياً أم لا، أو ما إذا كانت جملتان مرتبطتان منطقيًا أم لا. 
+•	 تصنيف كل كلمة في الجملة: تحديد مركبات الجملة القواعدية  (اسم، فعل، صفة), وتحديد نوع الاسم او زمن الفعل. 
+•	 انشاء محتوى نصي: تكملة النص الموجود بنص تلقائي، ايجاد الكلمات الناقصة في نص وتعويضها بكلمات مناسبة صحيحة. 
+•	استخراج إجابة من نص: إعطاء سؤال وسياق معين، واستخراج الإجابة على السؤال استنادًا إلى المعلومات المقدمة في السياق
+•	إنتاج جملة جديدة من نص مدخل: ترجمة نص إلى لغة أخرى او تلخيص نص. 
+
+ومع ذلك, لا تقتصر معالجة اللغة الطبيعة  NLP على النص المكتوب فقط، بل تعالج أيضًا التحديات المعقدة في التعرف على الكلام ، مثل إنتاج نص مكتوب لعينة صوتية أو وصف صورة.
+لماذا تعتبر معالجة اللغة الطبيعية تحدي ؟ 
+لا تعالج أجهزة الحاسوب المعلومات بنفس الطريقة التي يتبعها البشر. على سبيل المثال، عندما نقرأ الجملة "أنا جائع"، يمكننا فهم معناها بسهولة. بالمثل، بالنظر إلى جملتين مثل "أنا جائع" و"أنا حزين"، يمكننا بسهولة تحديد مدى تشابههما. اما بالنسبة لنماذج التعلم الآلي، فإن هذه المهام أصعب بكثير, اذ تتطلب معالجة النص طريقة تتيح للنموذج التعلم منه. ونظرًا لتعقيد اللغة، فإننا بحاجة إلى التفكير بعناية في كيفية القيام بذلك. 
+تم إجراء الكثير من الأبحاث حول كيفية توضيح النص، وسنلقي نظرة على بعض الأساليب في الفصل القادم.
+
+
+
+ Getting the sentiment of a review, detecting if an email is spam, determining if a sentence is grammatically correct or whether two sentences are logically related or not
 - **Classifying each word in a sentence**: Identifying the grammatical components of a sentence (noun, verb, adjective), or the named entities (person, location, organization)
 - **Generating text content**: Completing a prompt with auto-generated text, filling in the blanks in a text with masked words
 - **Extracting an answer from a text**: Given a question and a context, extracting the answer to the question based on the information provided in the context
