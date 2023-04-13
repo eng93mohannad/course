@@ -1,39 +1,37 @@
 <!-- DISABLE-FRONTMATTER-SECTIONS -->
 
-# End-of-chapter quiz[[end-of-chapter-quiz]]
+# اختبار نهاية الفصل [[end-of-chapter-quiz]]
 
 <CourseFloatingBanner
     chapter={1}
     classNames="absolute z-10 right-0 top-0"
 />
 
-This chapter covered a lot of ground! Don't worry if you didn't grasp all the details; the next chapters will help you understand how things work under the hood.
+غطى هذا الفصل الكثير من الاساسيات! لا تقلق إذا لم تفهم كل التفاصيل ؛ ستساعدك الفصول التالية على فهم كيفية عمل الأشياء بالتفصيل .
+أولاً ، دعنا نختبر ما تعلمته في هذا الفصل!
 
-First, though, let's test what you learned in this chapter!
-
-
-### 1. Explore the Hub and look for the `roberta-large-mnli` checkpoint. What task does it perform?
+### 1. استكشف Hub  وابحث عن نقطة فحص `roberta-large-mnli`ما المهمة التي تؤديها؟
 
 
 <Question
 	choices={[
 		{
-			text: "Summarization",
+			text: "التلخيص ",
 			explain: "Look again on the <a href=\"https://huggingface.co/roberta-large-mnli\">roberta-large-mnli page</a>."
 		},
 		{
-			text: "Text classification",
+			text: "تصنيف النصوص ",
 			explain: "More precisely, it classifies if two sentences are logically linked across three labels (contradiction, neutral, entailment) — a task also called <em>natural language inference</em>.",
 			correct: true
 		},
 		{
-			text: "Text generation",
+			text: "انشاء النصوص",
 			explain: "Look again on the <a href=\"https://huggingface.co/roberta-large-mnli\">roberta-large-mnli page</a>."
 		}
 	]}
 />
 
-### 2. What will the following code return?
+### 2. ماهي نتيجة البرنامج التالي ؟ 
 
 ```py
 from transformers import pipeline
@@ -60,7 +58,7 @@ ner("My name is Sylvain and I work at Hugging Face in Brooklyn.")
 	]}
 />
 
-### 3. What should replace ... in this code sample?
+### 3. املأ الفراغ في البرنامج التالي ؟ 
 
 ```py
 from transformers import pipeline
@@ -87,7 +85,7 @@ result = filler("...")
 	]}
 />
 
-### 4. Why will this code fail?
+### 4. لماذا فشل البرنامج التالي ؟ 
 
 ```py
 from transformers import pipeline
@@ -118,7 +116,7 @@ result = classifier("This is a course about the Transformers library")
 	]}
 />
 
-### 5. What does "transfer learning" mean?
+### 5. ماذا نقصد ب نقل التعلم ؟ 
 
 <Question
 	choices={[
@@ -138,7 +136,7 @@ result = classifier("This is a course about the Transformers library")
 	]}
 />
 
-### 6. True or false? A language model usually does not need labels for its pretraining.
+### 6. صحيح ام خطأ , نموذج اللغة عادة لا يحتاج إلى تسميات للتدرب المسبق.
 
 <Question
 	choices={[
@@ -175,7 +173,7 @@ result = classifier("This is a course about the Transformers library")
 />
 
 
-### 8. Which of these types of models would you use for completing prompts with generated text?
+### 8. أي من هذه الأنواع من النماذج قد تستخدمه لإكمال المطالبات بالنص الذي تم إنشاؤه؟
 
 <Question
 	choices={[
@@ -195,7 +193,7 @@ result = classifier("This is a course about the Transformers library")
 	]}
 />
 
-### 9. Which of those types of models would you use for summarizing texts?
+### 9. أي من هذه الأنواع من النماذج ستستخدمها لتلخيص النصوص؟
 
 <Question
 	choices={[
@@ -215,7 +213,7 @@ result = classifier("This is a course about the Transformers library")
 	]}
 />
 
-### 10. Which of these types of models would you use for classifying text inputs according to certain labels?
+### 10. أي من هذه الأنواع من النماذج قد تستخدمه لتصنيف إدخالات النص وفقًا لتصنيفات معينة؟
 
 <Question
 	choices={[
