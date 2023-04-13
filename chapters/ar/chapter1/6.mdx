@@ -1,4 +1,4 @@
-# Decoder models[[decoder-models]]
+# نماذج فك التشفير [[decoder-models]]
 
 <CourseFloatingBanner
     chapter={1}
@@ -7,13 +7,10 @@
 
 <Youtube id="d_ixlCubqQw" />
 
-Decoder models use only the decoder of a Transformer model. At each stage, for a given word the attention layers can only access the words positioned before it in the sentence. These models are often called *auto-regressive models*.
-
-The pretraining of decoder models usually revolves around predicting the next word in the sentence.
-
-These models are best suited for tasks involving text generation.
-
-Representatives of this family of models include:
+تستخدم نماذج مفكك الشفرة وحدة فك ترميز نموذج محول فقط. في كل مرحلة ، بالنسبة لكلمة معينة ، يمكن لطبقات الانتباه فقط الوصول إلى الكلمات الموضوعة قبلها في الجملة. غالبًا ما تسمى هذه النماذج * نماذج الانحدار التلقائي *.
+عادة ما يدور التدريب المسبق لنماذج مفكك الشفرة حول التنبؤ بالكلمة التالية في الجملة.
+هذه النماذج هي الأنسب للمهام التي تتضمن إنشاء نص.
+تشمل هذه الفئات : 
 
 - [CTRL](https://huggingface.co/transformers/model_doc/ctrl.html)
 - [GPT](https://huggingface.co/docs/transformers/model_doc/openai-gpt)
