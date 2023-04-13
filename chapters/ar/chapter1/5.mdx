@@ -1,4 +1,4 @@
-# Encoder models[[encoder-models]]
+# نماذج التشفير [[encoder-models]]
 
 <CourseFloatingBanner
     chapter={1}
@@ -7,14 +7,10 @@
 
 <Youtube id="MUqNwgPjJvQ" />
 
-Encoder models use only the encoder of a Transformer model. At each stage, the attention layers can access all the words in the initial sentence. These models are often characterized as having "bi-directional" attention, and are often called *auto-encoding models*.
-
-The pretraining of these models usually revolves around somehow corrupting a given sentence (for instance, by masking random words in it) and tasking the model with finding or reconstructing the initial sentence.
-
-Encoder models are best suited for tasks requiring an understanding of the full sentence, such as sentence classification, named entity recognition (and more generally word classification), and extractive question answering.
-
-Representatives of this family of models include:
-
+تستخدم نماذج التشفير فقط وحدة التشفير الخاصة بنموذج المحولات. في كل مرحلة ، يمكن لطبقات الانتباه الوصول إلى جميع الكلمات في الجملة الأولى. غالبًا ما توصف هذه النماذج بأنها تحظى باهتمام "ثنائي الاتجاه" ، وغالبًا ما يطلق عليها * نماذج التشفير التلقائي *.
+عادة ما يدور التدريب المسبق لهذه النماذج حول إفساد جملة معينة بطريقة ما (على سبيل المثال ، عن طريق إخفاء كلمات عشوائية فيها) وتكليف النموذج بإيجاد أو إعادة بناء الجملة الأولية.
+تعد نماذج التشفير هي الأنسب للمهام التي تتطلب فهمًا للجملة الكاملة ، مثل تصنيف الجملة ، والتعرف على الكيانات المسماة (وتصنيف الكلمات بشكل عام) ، والإجابة الاستخراجية للأسئلة.
+يشمل فئات هذه النماذج:
 - [ALBERT](https://huggingface.co/transformers/model_doc/albert.html)
 - [BERT](https://huggingface.co/transformers/model_doc/bert.html)
 - [DistilBERT](https://huggingface.co/transformers/model_doc/distilbert.html)
