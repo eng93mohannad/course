@@ -1,4 +1,4 @@
-# Bias and limitations[[bias-and-limitations]]
+# التحيز والقيود [[bias-and-limitations]]
 
 <CourseFloatingBanner chapter={1}
   classNames="absolute z-10 right-0 top-0"
@@ -7,10 +7,8 @@
     {label: "Aws Studio", value: "https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/course/en/chapter1/section8.ipynb"},
 ]} />
 
-If your intent is to use a pretrained model or a fine-tuned version in production, please be aware that, while these models are powerful tools, they come with limitations. The biggest of these is that, to enable pretraining on large amounts of data, researchers often scrape all the content they can find, taking the best as well as the worst of what is available on the internet. 
-
-To give a quick illustration, let's go back the example of a `fill-mask` pipeline with the BERT model:
-
+إذا كنت تنوي استخدام نموذج تم تدريبه مسبقًا أو إصدارًا دقيقًا في الإنتاج ، فيرجى العلم أنه على الرغم من أن هذه النماذج أدوات قوية ، إلا أنها مصحوبة بقيود. أكبرها هو أنه لتمكين التدريب المسبق على كميات كبيرة من البيانات ، غالبًا ما يقوم الباحثون بشق كل المحتوى الذي يمكنهم العثور عليه ، والحصول على أفضل وأسوأ ما هو متاح على الإنترنت.
+لإعطاء توضيح سريع ، دعنا نعود إلى مثال خط أنابيب `fill-mask` بنموذج BERT:
 ```python
 from transformers import pipeline
 
@@ -27,6 +25,5 @@ print([r["token_str"] for r in result])
 ['nurse', 'waitress', 'teacher', 'maid', 'prostitute']
 ```
 
-When asked to fill in the missing word in these two sentences, the model gives only one gender-free answer (waiter/waitress). The others are work occupations usually associated with one specific gender -- and yes, prostitute ended up in the top 5 possibilities the model associates with "woman" and "work." This happens even though BERT is one of the rare Transformer models not built by scraping data from all over the internet, but rather using apparently neutral data (it's trained on the [English Wikipedia](https://huggingface.co/datasets/wikipedia) and [BookCorpus](https://huggingface.co/datasets/bookcorpus) datasets). 
-
-When you use these tools, you therefore need to keep in the back of your mind that the original model you are using could very easily generate sexist, racist, or homophobic content. Fine-tuning the model on your data won't make this intrinsic bias disappear.
+عندما يُطلب منك ملء الكلمة المفقودة في هاتين الجملتين ، يقدم النموذج إجابة واحدة فقط خالية من الجنس (نادل / نادلة). أما المهن الأخرى فهي مهن عمل مرتبطة عادةً بجنس واحد محدد - ونعم ، انتهى الأمر بالمومس في أفضل 5 احتمالات يربطها النموذج بـ "المرأة" و "العمل". يحدث هذا على الرغم من أن BERT هو أحد نماذج Transformer النادرة التي لم يتم إنشاؤها عن طريق شق البيانات من جميع أنحاء الإنترنت ، ولكن باستخدام بيانات محايدة ظاهريًا (تم تدريبه على [Wikipedia الإنجليزية] (https://huggingface.co/datasets/wikipedia ) و [BookCorpus] (https://huggingface.co/datasets/bookcorpus)).
+عند استخدام هذه الأدوات ، يجب أن تضع في اعتبارك أن النموذج الأصلي الذي تستخدمه يمكن أن يولد بسهولة محتوى متحيزًا جنسيًا أو عنصريًا. لن يؤدي ضبط النموذج على بياناتك إلى اختفاء هذا التحيز الجوهري.
