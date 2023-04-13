@@ -1,4 +1,4 @@
-# Sequence-to-sequence models[sequence-to-sequence-models]
+# نماذج التسلسل إلى التسلسل [sequence-to-sequence-models]
 
 <CourseFloatingBanner
     chapter={1}
@@ -7,13 +7,10 @@
 
 <Youtube id="0_4KEb08xrE" />
 
-Encoder-decoder models (also called *sequence-to-sequence models*) use both parts of the Transformer architecture. At each stage, the attention layers of the encoder can access all the words in the initial sentence, whereas the attention layers of the decoder can only access the words positioned before a given word in the input.
-
-The pretraining of these models can be done using the objectives of encoder or decoder models, but usually involves something a bit more complex. For instance, [T5](https://huggingface.co/t5-base) is pretrained by replacing random spans of text (that can contain several words) with a single mask special word, and the objective is then to predict the text that this mask word replaces.
-
-Sequence-to-sequence models are best suited for tasks revolving around generating new sentences depending on a given input, such as summarization, translation, or generative question answering.
-
-Representatives of this family of models include:
+تستخدم نماذج وحدة فك التشفير (وتسمى أيضًا * نماذج التسلسل إلى التسلسل *) كلا الجزأين من بنية المحول. في كل مرحلة ، يمكن لطبقات الانتباه في المشفر الوصول إلى جميع الكلمات في الجملة الأولية ، في حين أن طبقات الانتباه في وحدة فك التشفير يمكنها فقط الوصول إلى الكلمات الموضوعة قبل كلمة معينة في الإدخال.
+يمكن إجراء التدريب المسبق لهذه النماذج باستخدام أهداف نماذج التشفير أو وحدة فك التشفير ، ولكن عادةً ما تتضمن شيئًا أكثر تعقيدًا. على سبيل المثال ، يتم إجراء اختبار [T5] (https://huggingface.co/t5-base) مسبقًا عن طريق استبدال المسافات العشوائية للنص (التي يمكن أن تحتوي على عدة كلمات) بكلمة خاصة لقناع واحد ، والهدف بعد ذلك هو التنبؤ بالنص أن هذه الكلمة القناع تحل محل.
+تعد نماذج التسلسل إلى التسلسل هي الأنسب للمهام التي تدور حول إنشاء جمل جديدة اعتمادًا على إدخال معين ، مثل التلخيص أو الترجمة أو الإجابة على السؤال التوليدي.
+تمثل هذه الفئات : 
 
 - [BART](https://huggingface.co/transformers/model_doc/bart.html)
 - [mBART](https://huggingface.co/transformers/model_doc/mbart.html)
